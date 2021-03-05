@@ -41,8 +41,9 @@ const Login = (props) => {
         });
     }
 
-    props.user ? <Redirect to="/profile" /> : <Redirect to="/login" /> // double check
-
+    // props.user ? <Redirect to="/profile" /> : <Redirect to="/login" /> // double check
+    if (props.user) return <Redirect to="/profile" />
+    
     return (
         <div className="row mt-4">
             <h2>Login</h2>
